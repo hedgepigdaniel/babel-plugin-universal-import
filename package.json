@@ -13,9 +13,20 @@
   "homepage": "https://github.com/faceyspacey/babel-plugin-universal-import#readme",
   "author": "James Gillmore <james@faceyspacey.com>",
   "contributors": [
-    "Zack Jackson <zackary.l.jackson@gmail.com> (https://github.com/zackljackson)"
+    "Zack Jackson <zackary.l.jackson@gmail.com> (https://github.com/ScriptedAlchemy)"
   ],
   "license": "MIT",
+  "keywords": [
+    "universal-import",
+    "babel",
+    "babel plugin",
+    "ssr universal",
+    "code splitting",
+    "code-split ssr",
+    "react ssr",
+    "async imports",
+    "node async import"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint --fix ./",
