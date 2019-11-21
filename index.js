@@ -215,20 +215,6 @@ module.exports = function universalImportPlugin({ types: t, template }) {
 
         const universalImport = getImport(p, IMPORT_UNIVERSAL_DEFAULT)
 
-        // if being used in an await statement, return load() promise
-        if (
-          p.parentPath.parentPath.isYieldExpression() || // await transformed already
-          t.isAwaitExpression(p.parentPath.parentPath.node) // await not transformed already
-        ) {
-          const func = t.callExpression(universalImport, [
-            loadOption(t, loadTemplate, p, importArgNode).value,
-            t.booleanLiteral(false)
-          ])
-
-          p.parentPath.replaceWith(func)
-          return
-        }
-
         const opts = (this.opts.babelServer
           ? [
             idOption(t, importArgNode),

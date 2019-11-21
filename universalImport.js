@@ -1,8 +1,6 @@
 /* eslint-disable */
 
-module.exports = function(config, makeThennable) {
-  if (makeThennable === false) return config
-
+module.exports = function(config) {
   var load = config.load
   config.then = function(cb) {
     return load().then(function(res) {
